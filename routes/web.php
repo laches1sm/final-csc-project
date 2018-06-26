@@ -45,4 +45,9 @@ Route::get('/eventform', function(){
 
 });
 
+Route::get('/register', function()
+{
+return view('register');
+});
+
 

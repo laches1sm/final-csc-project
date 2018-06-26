@@ -13,21 +13,20 @@
 
 </head>
 <body>
-<header class="section">
-    <div class="container">
- <div class="header-top">
+<header>
+    <div class="header-top">
 
- <h1> Admin Login </h1>
-</div>
-</div>
+    <h1> Admin Login </h1>
+    </div>
 </header>
+<div class="box2">
 <div class="login-box">
 <form action="/menu">
     <div class="form-group">
         <label class="inputemail" for="inputEmail">Email</label>
         <input type="email" class="form-control" id="inputEmail" placeholder="Email">
 </div>
-<div class="form-group">
+<div class="form-group2">
     <label class="inputpass" for="inputPassword">Password</label>
     <input type="password" class="form-control" id="inputPassword" placeholder="Password">
 </div>
@@ -35,9 +34,15 @@
     <label>
         <input type="checkbox">Remember Me 
 </label>
+<a href='/register'>No account? Register!</a>
 </div>
 <button type="submit" class="btn btn-default">Submit</button>
-</form>
+<article>
+ <p>Welcome to the Culture Night Website.
+     Here, you can log in to add events.
+ </p>   
+</article>
+</div>
 </div>
 </body>
 

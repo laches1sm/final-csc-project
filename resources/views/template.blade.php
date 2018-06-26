@@ -12,20 +12,17 @@
 
 
 </head>
-<body>
-<header class="section">
-    <div class="container">
-<div class="header-top">
 
- <h1> Welcome to the Culture Night Website </h1>
- <a href="#">Sign In</a>
-</div>
-<nav class="nav-context">
-
-<a href="#">Events</a>
-<a href="#">Mobile Application</a>
-<a href="#">About Us</a>
-
-</nav>
-</div>
+    @section('header')
+<header>
+    <div class="header-top">
+        <h1> Welcome to the Culture Night Website </h1>
+        <a href="#">Sign In</a>
+    </div>
+    <nav class="nav-context">
+        <a href="#">Events</a>
+        <a href="#">Mobile Application</a>
+        <a href="#">About Us</a>
+    </nav>
 </header>
+@show

@@ -13,17 +13,15 @@
 
 </head>
 <body>
-<header class="section">
-    <div class="container">
-<div class="header-top">
+<header>
+    <div class="header-top">
+        <h1> Welcome to the Culture Night Website </h1>
+        <a href="/login">Sign Out</a>
+    </div>
+    <nav class="nav-context">
 
- <h1> Welcome to the Culture Night Website </h1>
- <a href="/login">Sign Out</a>
-</div>
-<nav class="nav-context">
-
-</nav>
-</div>
+    </nav>
+</header>
 </body>
 
 </html>
