@@ -20,6 +20,8 @@ class UserComment extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->foreign('event_id')->references('event_id')->on('events');
             $table->foreign('comment_id')->references('comment_id')->on('comments');
+            $table->timestamp('created_at')->nullable();    
+            $table->timestamp('updated_at')->nullable();
          
 
         });

@@ -33,20 +33,23 @@
             <label class="inputeventname" for="inputEventName">Title of Event</label>
 
 
-            <input type="text" name="title" class="form-control" id="inputEventName" placeholder="Event Name" v-model="title">
+            <input type="text" name="title" class="form-control" id="inputEventName" placeholder="Event Name" v-model="title" @keydown="errors.clear('title')">
+
+            <scan class="help is-danger" v-text="errors.get('title')"></scan>
+                    
     </div>
     <div class="form-group">
 
             <label class="inputdesclong" for="inputEventDescLong">Long description</label>
 
-            <textarea name="description_long" class="inputEventDescLong" rows="10" cols="60" v-model="description_long" placeholder="Enter a long description for your event here..."></textarea>
-
+            <textarea name="description_long" class="inputEventDescLong" rows="10" cols="60" v-model="description_long" placeholder="Enter a long description for your event here..."  @keydown="errors.clear('description_long')"></textarea>
+            <scan class="help is-danger" v-text="errors.get('description_long')"></scan>
     </div>
     <div class="form-group">
 
             <label class="inputshortdesc" for="inputEventDescShort">Short description</label>
-            <textarea name="description_short" class="inputEventDescShort" rows="10" cols="60" v-model="description_short" placeholder="Enter a short description for your event here..."></textarea>
-
+            <textarea name="description_short" class="inputEventDescShort" rows="10" cols="60" v-model="description_short" placeholder="Enter a short description for your event here..."  @keydown="errors.clear('description_short')"></textarea>
+            <scan class="help is-danger" v-text="errors.get('description_short')"></scan>
 
     </div>
 
@@ -55,7 +58,8 @@
             <label class="inputfirstinterest" for="inputEventInterest1">First interest</label>
 
 
-            <input type="text" name="interest1" class="form-control" id="inputEventInterest1" placeholder="First Interest" v-model="interest_1">
+            <input type="text" name="interest1" class="form-control" id="inputEventInterest1" placeholder="First Interest" v-model="interest_1" @keydown="errors.clear('interest_1')">
+            <scan class="help is-danger" v-text="errors.get('interest_1')"></scan>
     </div>
 
 
@@ -64,14 +68,16 @@
             <label class="inputsecondinterest" for="inputEventInterest2">Second interest</label>
 
 
-            <input type="text" name="interest2" class="form-control" id="inputEventInterest2" placeholder="Second Interest" v-model="interest_2">
+            <input type="text" name="interest2" class="form-control" id="inputEventInterest2" placeholder="Second Interest" v-model="interest_2" @keydown="errors.clear('interest_2')">
+            <scan class="help is-danger" v-text="errors.get('interest_2')"></scan>
     </div>
     <div class="form-group">
 
             <label class="inputtime" for="inputEventTime">Time</label>
 
 
-            <input type="time" name="time" class="form-control" id="inputEventTime" placeholder="Time" v-model="time">
+            <input type="time" name="time" class="form-control" id="inputEventTime" placeholder="Time" v-model="time"  @keydown="errors.clear('time')">
+            <scan class="help is-danger" v-text="errors.get('time')"></scan>
     </div>
 
     <div class="form-group">
@@ -79,7 +85,8 @@
             <label class="inputlocstring" for="inputEventLocString">Locaction Name</label>
 
 
-            <input type="text" name="loc_string" class="form-control" id="inputEventLocString" placeholder="Location" v-model="loc_string">
+            <input type="text" name="loc_string" class="form-control" id="inputEventLocString" placeholder="Location" v-model="loc_string"  @keydown="errors.clear('loc_string')">
+            <scan class="help is-danger" v-text="errors.get('loc_string')"></scan>
     </div>
 
 
@@ -88,7 +95,8 @@
             <label class="inputlat" for="inputEventLat">Latitude</label>
 
 
-            <input type="number" name="lat" class="form-control" id="inputEventLat"  placeholder="Latitude" v-model="lat">
+            <input type="number" name="lat" class="form-control" id="inputEventLat"  placeholder="Latitude" v-model="lat"  @keydown="errors.clear('lat')">
+            <scan class="help is-danger" v-text="errors.get('lat')"></scan>
     </div>
 
 
@@ -97,7 +105,8 @@
             <label class="inputlong" for="inputEventLong">Longitude</label>
 
 
-            <input type="number" name="long" class="form-control" id="inputEventLong" placeholder="Longitude" v-model="long">
+            <input type="number" name="long" class="form-control" id="inputEventLong" placeholder="Longitude" v-model="long"  @keydown="errors.clear('')">
+            <scan class="help is-danger" v-text="errors.get('long')"></scan>
     </div>
 
 

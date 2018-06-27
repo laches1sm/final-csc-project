@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Events;
 
 
 class EventsController extends Controller
@@ -40,24 +41,7 @@ class EventsController extends Controller
 
         $events->save();
 
-        //Events::forceCreate([
-          //  'title' => request('title'),
-           // 'description_short' => request('description_short'),
-           // 'description_long' => request('description_long'),
-           // 'time' => request('time'),
-           // 'interest_1' => request('interest_1'),
-           // 'interest_2' => request('interest_2'),
-           // 'loc_string' => request('loc_string'),
-           // 'lat' => request('lat'),
-           // 'long' => request('long'),
 
-
-            
-
-
-
-
-        //]);
 
         return ['message' => 'Event Created'];
     }

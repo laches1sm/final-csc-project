@@ -25,6 +25,10 @@ class Events extends Migration
             $table->string('loc_string');
             $table->decimal('lat');
             $table->decimal('long');
+            $table->timestamp('created_at')->nullable();    
+            $table->timestamp('updated_at')->nullable();
+
+
             
 
 

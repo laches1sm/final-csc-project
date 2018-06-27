@@ -1,3 +1,39 @@
+class Errors{
+
+    constructor(){
+
+        this.errors = {};
+
+    };
+
+    has(field){
+        return this.errors.hasOwnProperty(field);
+    }
+
+    
+    get(field){
+
+        if(this.errors[field]) {
+            return this.errors[field][0];
+        }
+
+    }
+
+    any(){
+        return Object.keys(this.errors).length > 0;
+    }
+    record(errors){
+        this.errors = errors;
+    }
+
+    clear(field){
+        delete this.errors[field];
+    }
+
+}
+
+
+
 new Vue({
     el: '#app',
 
@@ -11,7 +47,8 @@ new Vue({
         time: "",
         loc_string: "",
         lat: "",
-        long: ""
+        long: "",
+        errors: new Errors(),
 
 
     },
@@ -19,7 +56,10 @@ new Vue({
     methods: {
 
         onSubmit(){
-            axios.post('events', this.$data);
+            axios.post('/events', this.$data)
+            .then(response => alert('Success'))
+            .catch(error => this.errors = error.response.data);
+            
             
         }
 

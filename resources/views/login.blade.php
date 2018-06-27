@@ -16,7 +16,7 @@
 <header>
     <div class="header-top">
 
-    <h1> Admin Login </h1>
+    <h1> Login </h1>
     </div>
 </header>
 <div id="app" class="box2">

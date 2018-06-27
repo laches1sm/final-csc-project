@@ -50,5 +50,6 @@ Route::get('/register', function()
 return view('register');
 });
 
-//Route::get('eventform', 'Events@create');
+
 Route::post('events', 'EventsController@store');
+//Route::get('/eventlist', 'EventsController@create');

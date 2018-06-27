@@ -20,6 +20,8 @@ class Comments extends Migration
             $table->longText('comment_body');
             $table->integer('rating');
             $table->boolean('approved');
+            $table->timestamp('created_at')->nullable();    
+            $table->timestamp('updated_at')->nullable();
             
 
         });
