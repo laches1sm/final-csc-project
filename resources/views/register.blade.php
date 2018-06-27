@@ -15,8 +15,9 @@
 
 </head>
 <body>
+    
 @section('header')
-      @parent
+@parent
       @endsection
 
 <div class="box2">

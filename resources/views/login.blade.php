@@ -19,12 +19,12 @@
     <h1> Admin Login </h1>
     </div>
 </header>
-<div class="box2">
+<div id="app" class="box2">
 <div class="login-box">
-<form action="/menu">
+<form action="/menu" >
     <div class="form-group">
         <label class="inputemail" for="inputEmail">Email</label>
-        <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+        <input type="email" class="form-control" id="inputEmail" placeholder="Email" v-model="email">
 </div>
 <div class="form-group2">
     <label class="inputpass" for="inputPassword">Password</label>
@@ -35,15 +35,20 @@
         <input type="checkbox">Remember Me 
 </label>
 <a href='/register'>No account? Register!</a>
+    </div>
+    <button type="submit" class="btn btn-default">Submit</button>
+        <article>
+            <p>Welcome to the Culture Night Website.
+                Here, you can log in to add events.
+                    </p>   
+        </article>
+    </div>
 </div>
-<button type="submit" class="btn btn-default">Submit</button>
-<article>
- <p>Welcome to the Culture Night Website.
-     Here, you can log in to add events.
- </p>   
-</article>
-</div>
-</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.js"></script>
+    <script src="https://unpkg.com/vue@2.1.6/dist/vue.js"></script>
+    <script src="/js/app.js"></script>
+
 </body>
 
     </html>

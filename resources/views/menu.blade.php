@@ -20,13 +20,23 @@
  <h1> Welcome to the Culture Night Website </h1>
  <a href="/login">Sign Out</a>
 </div>
-<nav class="nav-context">
+    <nav class="nav-context">
 
-</nav>
+    </nav>
 </div>
 </header>
-<div class="menu">
-    <button action="/eventform">Add New Event</button>
+    <section class="menu-box">
+        <article id="app">
+            <h1>Menu</h1>
+            <a href="/eventform" class="button-event-add">Add Event</a>
+            <a href="/eventlist" class="button-event-list">See Event List</a>          
+        </article>
+        
+</section>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
 </body>
 </html>
