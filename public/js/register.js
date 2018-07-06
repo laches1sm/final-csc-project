@@ -97,15 +97,10 @@ new Vue({
     data: {
         form: new Form({
 
-            title: '',
-            description_long: '',
-            description_short: '',
-            time: '',
-            loc_string: '',
-            lat: '',
-            long: '',
-            interest_1: '',
-            interest_2: '',
+           username: '',
+           email: '',
+           password: '',
+           confirm_password: '',
 
 
         }),
@@ -119,10 +114,41 @@ new Vue({
     methods: {
 
         onSubmit(){
-            this.form.submit('post', '/events');
+            this.form.submit('post', '/login');
             
             
         },
+
+        checkForm: function (e){
+            if (this.form.username && this.form.email && this.form.password && this.form.confirm_password){
+                return true;
+
+            }
+
+            this.form.errors = [];
+
+            if(!this.form.username){
+                this.errors.push('Needs username');
+            }
+
+            if(!this.form.email){
+                this.errors.push('Needs email');
+            }
+
+            if(!this.form.password){
+                this.errors.push('Needs password');
+            }
+
+            if(!this.form.confirm_password){
+                this.errors.push('Needs a confirmation password');
+            }
+
+            if(!this.form.password == this.form.confirm_password){
+                this.errors.push('Passwords do not match!');
+            }
+
+            e.preventDefault();
+        }
 
     }
 });
