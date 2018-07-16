@@ -25,10 +25,7 @@ Route::get('/', function () {
     return view('welcome', compact('events'));
 });
 
-Route::get('/aboutus', function(){
-    return view('aboutus');
 
-});
 
 Route::get('/login', function(){
     return view('login');
@@ -53,3 +50,7 @@ return view('register');
 
 Route::post('events', 'EventsController@store');
 //Route::get('/eventlist', 'EventsController@create');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

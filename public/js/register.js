@@ -128,23 +128,23 @@ new Vue({
             this.form.errors = [];
 
             if(!this.form.username){
-                this.errors.push('Needs username');
+                this.form.errors.push('Needs username');
             }
 
             if(!this.form.email){
-                this.errors.push('Needs email');
+                this.form.errors.push('Needs email');
             }
 
             if(!this.form.password){
-                this.errors.push('Needs password');
+                this.form.errors.push('Needs password');
             }
 
             if(!this.form.confirm_password){
-                this.errors.push('Needs a confirmation password');
+                this.form.errors.push('Needs a confirmation password');
             }
 
             if(!this.form.password == this.form.confirm_password){
-                this.errors.push('Passwords do not match!');
+                this.form.errors.push('Passwords do not match!');
             }
 
             e.preventDefault();
