@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="box2">
-    <div class="login-box">
+    <div class="container">
 
             <p class="info">
                 Here, you can login to the website and add events.

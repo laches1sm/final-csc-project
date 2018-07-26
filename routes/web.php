@@ -49,8 +49,11 @@ return view('register');
 
 
 Route::post('events', 'EventsController@store');
-//Route::get('/eventlist', 'EventsController@create');
 
 Auth::routes();
 
+Route::get('/eventslist', 'EventsController@create');
+
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/events/{events}', 'EventsController@show');

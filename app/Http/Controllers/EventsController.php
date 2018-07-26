@@ -8,12 +8,12 @@ use App\Events;
 
 class EventsController extends Controller
 {
-    //public function create()
-    //{
-      //  return view('eventslist', [
-            //'events' => Events::all()
-        //]);
-    //}
+    public function create()
+    {
+        $events = Events::all();
+
+        return view('eventlist', compact('events'));
+    }
 
     public function store(Events $events)
     {
@@ -44,5 +44,12 @@ class EventsController extends Controller
 
 
         return ['message' => 'Event Created'];
+    }
+
+    public function show(Events $events)
+    {
+        
+
+        return view('events.show', compact($events));
     }
 }

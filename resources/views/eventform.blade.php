@@ -1,44 +1,29 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- This page is for letting the user insert events into the system.-->
+<!-- Inherit from app.blade template. Includes header -->
+@extends('layouts.app')
 
-<title> Blah </title>
-<link href="https://fonts.googleapis.com/css?family=Open+Sans:400, 700" rel="stylesheet">
-<link rel="stylesheet" href="/css/app.css">
-<link rel="stylesheet" href="/css/normalize.css">
-
-
-</head>
-<body>
-<header>
-    <div class="header-top">
-        <h1> Welcome to the Culture Night Website </h1>
-        <a href="/login">Sign Out</a>
-    </div>
-    <nav class="nav-context">
-
-    </nav>
-</header>
-
+<!-- Overwrite what is in the content section in app.blade with this-->
+@section('content')
 <section>
     <article>
+    <!-- Setting up the box that will contain the form and Vue -->
     <div class="event-form-box" id="app">
             <h1 class="eventtitle">Add a New Event</h1>
+            <!-- Setting up a form that will POST the event that the user submits -->
+            <!-- Also some Vue - if there is any errors in the form the submit button will be disabled -->
     <form method="POST" action="/events" @submit.prevent="onSubmit" @keydown="form.errors.clear($event.target.name)">
-        <div class="form-group">
+    @csrf <!---CSRF protection -->
+        <div class="form-group-eventfirst">
 
             <label class="inputeventname" for="inputEventName">Title of Event</label>
 
 
-            <input type="text" name="title" class="form-control" id="inputEventName" placeholder="Event Name" v-model="form.title">
+            <input type="text" name="title" class="form-control1" id="inputEventName" placeholder="Event Name" v-model="form.title">
 
             <scan class="help is-danger" v-if="form.errors.has('form.title')" v-text="errors.get('form.title')"></scan>
                     
     </div>
-    <div class="form-group">
+    <div class="form-group-eventform">
 
             <label class="inputdesclong" for="inputEventDescLong">Long description</label>
 
@@ -46,7 +31,7 @@
 
             <scan class="help is-danger" v-if="form.errors.has('form.description_long')" v-text="errors.get('form.description_long')"></scan>
     </div>
-    <div class="form-group">
+    <div class="form-group-eventform">
 
             <label class="inputshortdesc" for="inputEventDescShort">Short description</label>
 
@@ -56,7 +41,7 @@
 
     </div>
 
-    <div class="form-group">
+    <div class="form-group-eventform">
 
             <label class="inputfirstinterest" for="inputEventInterest1">First interest</label>
 
@@ -67,7 +52,7 @@
     </div>
 
 
-    <div class="form-group">
+    <div class="form-group-eventform">
 
             <label class="inputsecondinterest" for="inputEventInterest2">Second interest</label>
 
@@ -75,7 +60,7 @@
             <input type="text" name="interest2" class="form-control" id="inputEventInterest2" placeholder="Second Interest" v-model="form.interest_2">
             <scan class="help is-danger" v-if="form.errors.has('form.interest_2')" v-text="errors.get('form.interest_2')"></scan>
     </div>
-    <div class="form-group">
+    <div class="form-group-eventform">
 
             <label class="inputtime" for="inputEventTime">Time</label>
 
@@ -84,7 +69,7 @@
             <scan class="help is-danger" v-if="form.errors.has('form.time')" v-text="errors.get('form.time')"></scan>
     </div>
 
-    <div class="form-group">
+    <div class="form-group-eventform">
 
             <label class="inputlocstring" for="inputEventLocString">Locaction Name</label>
 
@@ -94,7 +79,7 @@
     </div>
 
 
-    <div class="form-group">
+    <div class="form-group-eventform">
 
             <label class="inputlat" for="inputEventLat">Latitude</label>
 
@@ -104,7 +89,7 @@
     </div>
 
 
-    <div class="form-group">
+    <div class="form-group-eventform">
 
             <label class="inputlong" for="inputEventLong">Longitude</label>
 
@@ -123,11 +108,4 @@
     </article>
 </section>
 
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.3/axios.js"></script>
-    <script src="https://unpkg.com/vue@2.1.6/dist/vue.js"></script>
-    <script src="/js/app.js"></script>
-
-</body>
-
-</html>
+@endsection <!-- End overwrite -->
