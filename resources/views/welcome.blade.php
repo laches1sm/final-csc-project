@@ -8,14 +8,14 @@
 <div class="section">
   <div class="container">
 <div class="row">
-    <div class="col">
         @foreach($events as $event)
-   <div class="box"> 
-       {{$event}}
-    </div>
+       <article class="event_con">
+       <a class="links_for_event" href="/eventpage">{{$event->title}}</a>
+       <div class="body">{{$event->short_desc}} </div>
+       </article>
        @endforeach
-</div>
-
+    <br>
+    </div>
 </div>
 </div>
 

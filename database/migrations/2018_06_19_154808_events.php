@@ -27,6 +27,7 @@ class Events extends Migration
             $table->decimal('long');
             $table->timestamp('created_at')->nullable();    
             $table->timestamp('updated_at')->nullable();
+            $table->unsignedInteger('channel_id');
 
 
             

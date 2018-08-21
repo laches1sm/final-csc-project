@@ -11,21 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-
-    $events= [
-        'Example Event 1',
-        'Event Example 2',
-        'Event Example 3',
-        'Event Example 4',
-        'Event Example 5',
-        'Event Example 6',
-    ];
-
-    return view('welcome', compact('events'));
-});
-
-
+Route::get('/', 'EventsController@create');
 
 Route::get('/login', function(){
     return view('login');
@@ -54,6 +40,9 @@ Auth::routes();
 
 Route::get('/eventslist', 'EventsController@create');
 
-Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/events/{events}', 'EventsController@show');
+//Route::get('/eventpage/', 'EventsController@getEvent');
+Route::get('/eventpage', function()
+{
+    return view('eventpage');
+});

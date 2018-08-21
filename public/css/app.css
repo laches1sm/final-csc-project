@@ -15,17 +15,17 @@ a:hover{
 
  /** possibly just use .row */
 .row {
-    display: flex;
     justify-content: space-between;
     padding: 10px;
-    flex: 1;
+    flex-flow: row;
     margin-left: -10px;
     margin-right: -10px;
 }
 
+
 .col {
-    flex: 1;
     padding: 10px;
+    flex-flow: column;
 }
 
 .box {
@@ -80,6 +80,13 @@ a:hover{
     margin-bottom: 1000px;
 }
 
+.event_con{
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+
 
 .menu-box{
     box-shadow:0 4px 8px 0 rgba(0,0,0,.12),  0 2px 4px 0 rgba(0,0,0,.08);
@@ -93,11 +100,26 @@ a:hover{
     justify-content: space-between;
     flex-direction: column;
     text-align: center;
+    margin-top: 1000px;
+    margin-bottom: 1000px;
+
+}
+
+.titlebox{
+    box-shadow:0 4px 8px 0 rgba(0,0,0,.12),  0 2px 4px 0 rgba(0,0,0,.08);
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    display:flex;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #e3e3e3, #ffffff);
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
     margin-top: 100px;
     margin-bottom: 100px;
 
 }
-
 .event-form-box{
     box-shadow:0 4px 8px 0 rgba(0,0,0,.12),  0 2px 4px 0 rgba(0,0,0,.08);
     margin-left: auto;
@@ -135,13 +157,25 @@ a:hover{
     width: 700px;
     height: 700px;
     display:flex;
+    flex: 1;
     border-radius: 10px;
     background: linear-gradient(to bottom, #e3e3e3, #ffffff);
     justify-content: space-between;
-    flex-direction: column;
     text-align: center;
     margin-top: 100px;
+    margin-bottom: 200px;
+
+}
+
+.desc_box{
+    margin-left: 700px;
+    margin-right: 700px;
+    margin-top: -300px;
     margin-bottom: 100px;
+    border: solid;
+    border-radius: 10px;
+    justify-content: space-between;
+
 
 }
 
@@ -173,14 +207,17 @@ a:hover{
 }
 
 .eventtitle{
-    margin-bottom: -90px;
+    margin-bottom: -100px;
     flex: 1;
+    margin-left:auto;
+    margin-right:auto;
 }
 article{
     display: flex;
     flex-direction: column;
     align-content: space-between;
 }
+
 
 
 .container {
@@ -283,15 +320,25 @@ nav > a {
 }
 
 .ihatecss{
-    margin-left: 700px;
-    margin-top: -140px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:  -250px;
+    text-align: center;
 }
 .linkybois{
-    margin-left: 600px;
+    margin-left: auto;
     margin-right:auto;
-    margin-top: -80px;
+    margin-top: -130px;
+    margin-bottom: 200px;
+    text-align: center;
     
 }
+.container1{
+    margin-top:100px;
+    margin-bottom:600px;
+}
+
+
 
 .info{
     margin-top: 10px;
@@ -353,6 +400,13 @@ article > p{
     margin-bottom: 100px;
     
 } 
+
+.search-bar{
+    justify-content: center;
+    margin-left:1000px;
+
+}
+
 
 /*
 .form-control > .form-group{

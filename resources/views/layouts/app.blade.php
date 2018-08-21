@@ -17,7 +17,6 @@
     <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,600" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400, 700" rel="stylesheet">
     <link rel="stylesheet" href="/css/app.css">
     <link rel="stylesheet" href="/css/normalize.css">
@@ -51,6 +50,8 @@
 
     <a class="nav-link" href="/eventslist">Event List</a>
 
+     
+
 <!-- If user is logged in.... -->
 @else
 
@@ -61,7 +62,16 @@
     <!-- Handle any CSRF exploits here. -->
                                         @csrf
                                     </form>
+
+                                 
+
+
+
+                                  
+                                    
                                 </div>
+
+
                            
 <!-- Links that will be displayed at the bottom of the header -->
    <nav class="nav-context">
@@ -70,6 +80,8 @@
 
       
         <a class="nav-link" href="/eventform">Add Event</a>
+
+         
 
         <!-- End authenication check here -->
                         @endguest

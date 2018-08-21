@@ -50,6 +50,13 @@ class EventsController extends Controller
     {
         
 
-        return view('events.show', compact($events));
+        return view('eventlist', compact($events));
+    }
+
+    public function getEvent(Events $event)
+    {
+       
+
+       return view('eventpage', compact('event'));
     }
 }
