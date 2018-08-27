@@ -2,6 +2,7 @@ html, body {
     font-family: 'Open Sans', sans-serif;
 }
 
+
 a {
     text-decoration: none;
     color: #222222;
@@ -89,18 +90,46 @@ a:hover{
    
 }
 
+.event_card_row{
+    display: flex;
+    margin-right: auto 0;
+    margin-left: auto 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 30px;
+    width: 400px;
+    align-content: center;
+}
+
 .event_card{
     box-shadow:0 4px 8px 0 rgba(0,0,0,.12),  0 2px 4px 0 rgba(0,0,0,.08);
-    width:500px;
+    width:400px;
     height: 250px;
     display: flex;
     flex-direction: column;
     flex:1;
-    color: gainsboro;
+    background: linear-gradient(to bottom, #e1d7e2, #bbb3bc);
+    
+    margin-right: auto 0;
+    margin-left: auto 0;
+    position: center;
+    justify-content: space-between;
+    padding: 20px;
+    
+
+
+}
+.img_event{
+    background-image: 'http://www.belfastcentre.com/images/custom/uploads/214/images/CNB2017_Poster.jpg';
+}
+.event_card > span{
+    margin-bottom: 10px;
 }
 
+
 .event_card .card_img {
-    background-image: url(http://www.belfastcentre.com/images/custom/uploads/214/images/CNB2017_Poster.jpg);
      padding-bottom: 60%;
      background-size: cover;
      background-position: center;
@@ -111,7 +140,9 @@ a:hover{
 }
 
 
-
+.website_links{
+    color: gray;
+}
 
 
 .menu-box{
