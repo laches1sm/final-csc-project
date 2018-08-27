@@ -1,18 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-<section class='menu-box'>
-  <article> 
-      <h1> Example Event </h1>
-  </article> 
-</section>
 
-<section class="desc_box">
-    <p> Whoops, no picture yet! Please check back later... </p>
-    <p> Loruem ipsum </p>
-    <p> Time: 0:00 <p>
-        <p> Interests: Ipsum </p>
-        <p> Second Interest: Loruem </p>
+<div class="event_card">
+    <div class="event_card_left">
+       <img src="http://www.belfastcentre.com/images/custom/uploads/214/images/CNB2017_Poster.jpg" </img>
+    </div>
 
-    </section>
+    <div class="event_card_right">
+            <h1 class="event_title_card">{{$event->title}}</h1>
+            <p> {{ $event->long_desc}} </p>
+            <p><strong> Time: </strong> {{$event->time}} <p>
+                <p> <strong>Interest:</strong> {{$event->interest1}} </p>
+                <p> <strong> Second Interest: </strong> {{$event->interest2}} </p>
+    </div>
+    </div>
 @endsection

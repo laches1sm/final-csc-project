@@ -20,12 +20,14 @@ a:hover{
     flex-flow: row;
     margin-left: -10px;
     margin-right: -10px;
+    
 }
 
 
 .col {
     padding: 10px;
     flex-flow: column;
+    
 }
 
 .box {
@@ -86,6 +88,30 @@ a:hover{
     margin-right: auto;
    
 }
+
+.event_card{
+    box-shadow:0 4px 8px 0 rgba(0,0,0,.12),  0 2px 4px 0 rgba(0,0,0,.08);
+    width:500px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    flex:1;
+    color: gainsboro;
+}
+
+.event_card .card_img {
+    background-image: url(http://www.belfastcentre.com/images/custom/uploads/214/images/CNB2017_Poster.jpg);
+     padding-bottom: 60%;
+     background-size: cover;
+     background-position: center;
+  }
+
+.event_card_left, .event_card_right{
+    padding: 20px;
+}
+
+
+
 
 
 .menu-box{
