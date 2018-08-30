@@ -17,6 +17,8 @@ class EventsController extends Controller
 
     public function store(Events $events)
     {
+        //sends request to db to create a new event
+        // fields are set as required - if not in will fail validation
         $this->validate(request(),[
             'title' => 'required',
             'description_short' => 'required',
@@ -38,7 +40,7 @@ class EventsController extends Controller
         $events->loc_string = request('loc_string');
         $events->lat = request('lat');
         $events->long=request('long');
-
+        //save the event
         $events->save();
 
 
@@ -49,14 +51,17 @@ class EventsController extends Controller
     public function show(Events $events)
     {
         
-
+        //return view with all events
         return view('eventlist', compact($events));
     }
 
-    public function getEvent(Events $event)
+    public function getEvent($event_id)
     {
-       
+        //find the particular event via its id
+       $event = Events::find($event_id);
+       // return the view with that event
+       return view('eventpage')->withEvent($event);
 
-       return view('eventpage', compact('event'));
+      
     }
 }

@@ -41,8 +41,5 @@ Auth::routes();
 Route::get('/eventslist', 'EventsController@create');
 
 
-Route::get('/eventpage/{event}', function($id){
-    $event = Events::findOrFail($id);
-
-    return view('/eventpage', compact('event'));
-});
+Route::get('/eventpage/{id}', 'EventsController@getEvent');
+    

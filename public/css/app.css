@@ -18,7 +18,7 @@ a:hover{
 .row {
     justify-content: space-between;
     padding: 10px;
-    flex-flow: row;
+    flex-flow: row wrap;
     margin-left: -10px;
     margin-right: -10px;
     
@@ -82,7 +82,57 @@ a:hover{
 .box3 > p{
     margin-bottom: 1000px;
 }
+/**
+this is used to display indiduval events - main containter
+**/
+.event_card_for_display{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .12), 0 2px 4px 0 rgba(0, 0, 0, .08);
+    width: 700px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin-top:100px;
+    
+    margin-right: auto;
+    margin-left: auto;
 
+}
+
+
+.event_card_left{
+   margin-right: 20px;
+    border-radius: 10px;
+    
+
+}
+.event_card_right{
+    display: flex;
+    flex-direction: column;
+    padding:40px;
+
+    
+}
+
+
+.card-title{
+    font-size:2.0em;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0%;
+}
+
+
+/**
+Image on left side of event card resizing.
+**/
+.event_card_left > img:first-child{
+    width:400px;
+    height: auto;
+    border-radius: 10px;
+
+}
 .event_con{
     justify-content: center;
     margin-left: auto;
@@ -90,7 +140,41 @@ a:hover{
    
 }
 
+.page_title{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.12),  0 2px 4px 0 rgba(0,0,0,.08);
+    width: 300px;
+    height: 100px;
+    display:flex;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #e3e3e3, #ffffff);
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+
+}
+.box_for_long_event_desc{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.12),  0 2px 4px 0 rgba(0,0,0,.08);
+    width: auto;
+    height: auto;
+    display:flex;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, #e3e3e3, #ffffff);
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+
+}
+
 .event_card_row{
+    
     display: flex;
     margin-right: auto 0;
     margin-left: auto 0;
@@ -111,10 +195,8 @@ a:hover{
     flex-direction: column;
     flex:1;
     background: linear-gradient(to bottom, #e1d7e2, #bbb3bc);
-    
-    margin-right: auto 0;
-    margin-left: auto 0;
-    position: center;
+    margin: auto;
+   
     justify-content: space-between;
     padding: 20px;
     
@@ -135,9 +217,7 @@ a:hover{
      background-position: center;
   }
 
-.event_card_left, .event_card_right{
-    padding: 20px;
-}
+
 
 
 .website_links{
@@ -175,8 +255,12 @@ a:hover{
     text-align: center;
     margin-top: 100px;
     margin-bottom: 100px;
+    flex-flow: row wrap;
+
 
 }
+
+
 .event-form-box{
     box-shadow:0 4px 8px 0 rgba(0,0,0,.12),  0 2px 4px 0 rgba(0,0,0,.08);
     margin-left: auto;
@@ -463,63 +547,3 @@ article > p{
     margin-left:1000px;
 
 }
-
-
-/*
-.form-control > .form-group{
-    padding-left: 200px;
-    padding-right: 200px;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    margin-top: 20px;
-
-}
-
-label{
-    padding-left: 200px;
-    padding-right: 200px;
-    display: flex;
-    align-content: center;
-   
-}
-
-.form-group{
-    padding-left: 30px;
-    padding-right: 30px;
-    display: flex;
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-right: 10px;
-    align-items: center;
-    align-content: center;
-}
-
-.checkbox{
-    padding-left: 175px;
-    margin-top: 30px;
-    left: 22%;
-}
-
-button{
-    width: 300px;
-    height: 50px;
-    position: absolute;
-    top: 40%;
-    left: 22%;
-
-    margin: -70px 0 0 -170px;
-   
-}
-input{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-}
-
-.login-box{
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-} */
