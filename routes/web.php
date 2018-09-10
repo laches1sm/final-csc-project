@@ -34,7 +34,7 @@ return view('register');
 });
 
 
-Route::post('events', 'EventsController@store');
+Route::post('/events', 'EventsController@store');
 
 Auth::routes();
 
@@ -42,4 +42,8 @@ Route::get('/eventslist', 'EventsController@create');
 
 
 Route::get('/eventpage/{id}', 'EventsController@getEvent');
+
+Route::delete('/eventpage/{id}/destory', 'EventsController@destory');
+
+Route::post('/editevent/{id}/edit', 'EventsController@update');
     
