@@ -18,7 +18,7 @@
         <p><strong> Time: </strong> {{$event->time}} <p>
             <p> <strong>Interest:</strong> {{$event->interest_1}} </p>
             <p> <strong> Second Interest: </strong> {{$event->interest_2}} </p>
-            <a href="{{ url('eventpage/'.$event->event_id.'/destory') }}">Delete Event</a>
+            <a href="{{ url('events/'.$event->event_id.'/destroy') }}">Delete Event</a>
             <a href="{{ url('editevent/'.$event->event_id.'/edit') }}">Edit Event</a>
 
             @endif

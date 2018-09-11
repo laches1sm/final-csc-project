@@ -13,37 +13,37 @@
 
 Route::get('/', 'EventsController@create');
 
-Route::get('/login', function(){
+Route::get('login', function(){
     return view('login');
 
 });
 
-Route::get('/menu', function(){
+Route::get('menu', function(){
     return view('menu');
 
 });
 
-Route::get('/eventform', function(){
+Route::get('eventform', function(){
     return view('eventform');
 
 });
 
-Route::get('/register', function()
+Route::get('register', function()
 {
 return view('register');
 });
 
 
-Route::post('/events', 'EventsController@store');
+Route::post('events', 'EventsController@store');
 
 Auth::routes();
 
-Route::get('/eventslist', 'EventsController@create');
+Route::get('eventslist', 'EventsController@create');
 
 
-Route::get('/eventpage/{id}', 'EventsController@getEvent');
+Route::get('eventpage/{id}', 'EventsController@getEvent');
 
-Route::delete('/eventpage/{id}/destory', 'EventsController@destory');
+Route::delete('events/{id}/destroy', ['as' => 'destroy', 'uses' => 'EventsController@destroy']);
 
-Route::post('/editevent/{id}/edit', 'EventsController@update');
+Route::post('editevent/{id}/edit', 'EventsController@update');
     
