@@ -31,7 +31,7 @@
                                     </form>
             <a href="{{ url('editevent/edit/'.$event->event_id) }}" onclick="event.preventDefault();
                 document.getElementById('edit-form').submit();">{{ __('Edit Event') }}></a>
-                <form id="edit-form" action="{{url('/events/destroy/'.$event->event_id) }}" method="POST" style="display: none;">
+                <form id="edit-form" action="{{url('/events/edit/'.$event->event_id) }}" method="POST" style="display: none;">
                      <!-- Handle any CSRF exploits here. -->
                      @csrf
 
