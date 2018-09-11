@@ -47,6 +47,7 @@ class EventsController extends Controller
         if(!$events){
             $events = new Events();
             $events->title = $title;
+            $events->description_long = $description_long;
             $events->description_short = $description_short;
             $events->time = $time;
             $events->interest_1 = $interest_1;
@@ -81,18 +82,20 @@ class EventsController extends Controller
     public function destroy($event_id)
     {
         //deletes a particular event
-        $event = App\Events::find($event_id);
+
+        $event = Events::findOrFail($event_id);
         $event->delete();
 
+
         //will redirect users back to the event list pg
-        return redirect('/eventlist')->with('success', 'Item has been deleted');
+        return redirect('eventslist');
 
     }
 
     public function update(Request $request, $event_id)
     {
 
-        $events = App\Events::find($event_id);
+        $events = Events::find($event_id);
 
         $title = $request['title'];
         $description_short = $request['description_short'];

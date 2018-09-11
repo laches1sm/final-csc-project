@@ -43,7 +43,7 @@ Route::get('eventslist', 'EventsController@create');
 
 Route::get('eventpage/{id}', 'EventsController@getEvent');
 
-Route::delete('events/{id}/destroy', ['as' => 'destroy', 'uses' => 'EventsController@destroy']);
+Route::delete('events/destroy/{event_id}', 'EventsController@destroy');
 
-Route::post('editevent/{id}/edit', 'EventsController@update');
+Route::post('editevent/edit/{event_id}', 'EventsController@update');
     

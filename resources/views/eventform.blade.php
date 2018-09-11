@@ -46,7 +46,7 @@
             <label class="inputfirstinterest" for="inputEventInterest1">First interest</label>
 
 
-            <input type="text" name="interest1" class="form-control" id="inputEventInterest1" placeholder="First Interest"  >
+            <input type="text" name="interest_1" class="form-control" id="inputEventInterest1" placeholder="First Interest"  >
 
        <!---     <scan class="help is-danger" v-if="form.errors.has('form.interest_1')" v-text="errors.get('form.interest_1')"></scan> -->
     </div>
@@ -57,7 +57,7 @@
             <label class="inputsecondinterest" for="inputEventInterest2">Second interest</label>
 
 
-            <input type="text" name="interest2" class="form-control" id="inputEventInterest2" placeholder="Second Interest">
+            <input type="text" name="interest_2" class="form-control" id="inputEventInterest2" placeholder="Second Interest">
        <!---     <scan class="help is-danger" v-if="form.errors.has('form.interest_2')" v-text="errors.get('form.interest_2')"></scan> -->
     </div>
     <div class="form-group-eventform">

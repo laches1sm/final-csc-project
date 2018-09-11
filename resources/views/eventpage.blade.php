@@ -18,8 +18,26 @@
         <p><strong> Time: </strong> {{$event->time}} <p>
             <p> <strong>Interest:</strong> {{$event->interest_1}} </p>
             <p> <strong> Second Interest: </strong> {{$event->interest_2}} </p>
-            <a href="{{ url('events/'.$event->event_id.'/destroy') }}">Delete Event</a>
-            <a href="{{ url('editevent/'.$event->event_id.'/edit') }}">Edit Event</a>
+
+          <a href="{{url('/events/destroy/'.$event->event_id) }}" onclick="event.preventDefault();
+                                                          document.getElementById('destroy-form').submit();">{{ __('Delete Event') }}</a>
+    <form id="destroy-form" action="{{url('/events/destroy/'.$event->event_id) }}" method="POST" style="display: none;">
+
+    <!-- Handle any CSRF exploits here. -->
+                                        @csrf
+
+                                        <!-- Making sure that Laravel knows to delete, since Laravel doesn't support DELETE in forms...-->
+                                        @method('DELETE')
+                                    </form>
+            <a href="{{ url('editevent/edit/'.$event->event_id) }}" onclick="event.preventDefault();
+                document.getElementById('edit-form').submit();">{{ __('Edit Event') }}></a>
+                <form id="edit-form" action="{{url('/events/destroy/'.$event->event_id) }}" method="POST" style="display: none;">
+                     <!-- Handle any CSRF exploits here. -->
+                     @csrf
+
+                     <!-- Making sure that Laravel knows to PUT, since Laravel doesn't support PUT in forms...-->
+                     @method('PUT')
+                 </form>
 
             @endif
     </div>
