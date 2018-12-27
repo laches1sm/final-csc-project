@@ -11,38 +11,39 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', 'EventsController@create');
 
-    $events= [
-        'Example Event 1',
-        'Event Example 2',
-        'Event Example 3',
-        'Event Example 4',
-        'Event Example 5',
-        'Event Example 6',
-    ];
-
-    return view('welcome', compact('events'));
-});
-
-Route::get('/aboutus', function(){
-    return view('aboutus');
-
-});
-
-Route::get('/login', function(){
+Route::get('login', function(){
     return view('login');
 
 });
 
-Route::get('/menu', function(){
+Route::get('menu', function(){
     return view('menu');
 
 });
 
-Route::get('/eventform', function(){
+Route::get('eventform', function(){
     return view('eventform');
 
 });
 
+Route::get('register', function()
+{
+return view('register');
+});
 
+
+Route::post('events', 'EventsController@store');
+
+Auth::routes();
+
+Route::get('eventslist', 'EventsController@create');
+
+
+Route::get('eventpage/{id}', 'EventsController@getEvent');
+
+Route::delete('events/destroy/{event_id}', 'EventsController@destroy');
+
+Route::post('editevent/edit/{event_id}', 'EventsController@update');
+    
